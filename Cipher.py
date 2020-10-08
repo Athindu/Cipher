@@ -7,6 +7,25 @@ print("~~~~~~~~~~~~~~~WELCOME~~~~~~~~~~~~~~~\n")
 time.sleep(0.5)
 print("e---> Encode \nd---> Decode \ns---> Shift\nq---> Quit the program  \n")
 
+def encode(encode_message,shift_value1):
+    for i in encode_message:                                   #checking the characters in the message                       
+        if i in alphabet:
+            encode1=alphabet[alphabet.index(i)+shift_value1]
+        else:
+            print(i,end='')
+            continue
+        print(encode1,end='')
+        
+
+def decode(decode_message,shift_value2):
+    for i in decode_message:                                 #checking the characters in the message
+        if i in alphabet:
+            decode1=alphabet[alphabet.index(i)- shift_value2]
+        else:
+            print(i,end='')
+            continue
+        print(decode1,end='')
+
 
 def loop():
     while True:
